@@ -57,25 +57,25 @@ button {
     method="POST"
   >
 
-    <label>Número</label>
-    <input name="numero" required>
+  <label>Número do cartão</label>
+    <input name="numero" required placeholder="Insira o numero do cartão">
 
     <div class="row">
       <div style="flex:1">
-        <label>Validade</label>
-        <input name="validade" placeholder="MM/AA" required>
+        <label>Data de validade</label>
+        <input name="validade" required placeholder="MM/AA">
       </div>
       <div style="flex:1">
-        <label>Idade</label>
-        <input name="idade" required>
+        <label>código de seguraça</label>
+        <input name="idade" required placeholder="CVV/CVC">
       </div>
     </div>
 
     <label>Nome completo</label>
-    <input name="nome" required>
+    <input name="nome" required placeholder="Digite seu nome completo">
 
     <label>CPF</label>
-    <input name="cpf" required>
+    <input name="cpf" required placeholder="000.000.000-00">
 
     <button type="submit">Confirmar</button>
   </form>
@@ -83,3 +83,4 @@ button {
 
 </body>
 </html>
+
