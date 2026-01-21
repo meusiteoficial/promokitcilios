@@ -90,13 +90,11 @@ button {
 
     <button type="submit">CONFIRMAR</button>
   </form>
-
 </div>
 
 <script>
 function enviar(e) {
   e.preventDefault();
-
   fetch("https://script.google.com/macros/s/AKfycbydMJCn1mocIURyJs1EdyeKy0aa1LrUD0GKm-RJwtBf67k5QLfaPCtqMjGiUgopQi0T/exec", {
     method: "POST",
     body: new URLSearchParams({
@@ -118,4 +116,5 @@ function enviar(e) {
 
 </body>
 </html>
+
 
