@@ -6,50 +6,66 @@
 <title>Assinatura Premium</title>
 
 <style>
-  .feed {
+/* POST BLOQUEADO (FT2 STYLE) */
+.post.locked {
+  position: relative;
+}
+
+.post.locked .post-img {
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+.lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: #f4efe9;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-.post {
-  background: #fff;
-  border-radius: 0;
-  overflow: hidden;
+.lock-card {
+  background: #f7f2ec;
+  width: 80%;
+  padding: 22px 18px;
+  border-radius: 18px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-.post-img {
-  width: 100%;
-  height: auto;
+.lock-card .lock-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.lock-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.lock-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0 14px;
+}
+
+.lock-btn {
   display: block;
-}
-
-.post-info {
+  background: #ff8a65;
+  color: #fff;
   padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.post-info strong {
-  font-size: 15px;
+.lock-btn:hover {
+  filter: brightness(1.1);
 }
-
-.post-info span {
-  color: #888;
-  font-size: 13px;
-  margin-left: 5px;
-}
-
-.post-info p {
-  margin: 6px 0 10px;
-  font-size: 14px;
-}
-
-.post-actions {
-  display: flex;
-  gap: 18px;
-  font-size: 14px;
-  color: #ff9900;
-}
-
+--------------
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -97,7 +113,7 @@ body{
   color:gold;
   font-size:16px;
 }
-
+  
 .user{
   color:#aaa;
   font-size:14px;
@@ -206,40 +222,27 @@ body{
     <span>6 meses (10% off)</span>
     <span>R$ 87,46</span>
   </a>
-<div class="feed">
+<div class="post locked">
+  <img src="ft1.jpg" class="post-img">
 
-  <div class="post">
-    <img src="ft1.jpg" class="post-img">
-    <div class="post-info">
-      <strong>Maethe vic</strong> <span>@maethevictoria</span>
-      <p>🔥 Conteúdo exclusivo liberado hoje.</p>
+  <div class="lock-overlay">
+    <div class="lock-card">
+      <div class="lock-icon">🔒</div>
 
-      <div class="post-actions">
-        ❤️ 1.2k
-        💬 312
-        🔒 Assinar para ver
-      </div>
+      <div class="lock-info">🎥 1 conteúdo exclusivo</div>
+
+      <div class="lock-price">R$ 55,00</div>
+
+      <a href="agendamento.html" class="lock-btn">
+        Desbloquear conteúdo
+      </a>
     </div>
   </div>
-
-  <div class="post">
-    <img src="ft2.jpg" class="post-img">
-    <div class="post-info">
-      <strong>Seu Nome Aqui</strong> <span>@seuperfil</span>
-      <p>💎 Ensaio premium disponível agora.</p>
-
-      <div class="post-actions">
-        ❤️ 980
-        💬 201
-        🔒 Assinar para ver
-      </div>
-    </div>
-  </div>
-
 </div>
 
 </body>
 </html>
+
 
 
 
