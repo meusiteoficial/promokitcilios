@@ -6,45 +6,78 @@
 <title>Assinatura Premium</title>
 
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
-.card {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 9 / 16; /* formato vertical tipo story */
+.feed {
+  max-width: 420px;
+  margin: auto;
+}
+
+.post {
+  background: #111;
   border-radius: 16px;
   overflow: hidden;
-  background: #111;
 }
 
-.card img,
-.card video {
+.post-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(6px) brightness(0.4);
+  height: auto;
 }
 
-.card .overlay {
-  position: absolute;
-  inset: 0;
+.post-info {
+  padding: 14px;
+}
+
+.perfil {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  font-weight: 600;
 }
 
-.card .overlay span {
-  color: #ffb000;
-  font-weight: 700;
-  margin-top: 6px;
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.verificado {
+  color: #00aaff;
+  font-size: 12px;
+}
+
+.bio {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.stats {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.assinaturas button {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  color: #000;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.assinaturas button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(255,165,0,0.6);
 }
 
 body{
@@ -206,28 +239,42 @@ body{
 
 </div>
   
-<div class="grid">
+<div class="feed">
 
-  <div class="card">
-    <img src="thumb1.jpg">
-    <div class="overlay">
-      🔒 Bloqueado
-      <span>R$ 55,00</span>
-    </div>
-  </div>
+  <div class="post">
+    <img src="banner.png" class="post-img">
 
-  <div class="card">
-    <img src="thumb2.jpg">
-    <div class="overlay">
-      🔒 Bloqueado
-      <span>R$ 55,00</span>
+    <div class="post-info">
+      <div class="perfil">
+        <img src="avatar.png" class="avatar">
+        <div>
+          <strong>Seu Nome Aqui</strong>
+          <span class="verificado">✔ Verificado</span>
+          <p>@seuperfil</p>
+        </div>
+      </div>
+
+      <p class="bio">Bem-vindo ao meu conteúdo exclusivo 😍🔥</p>
+
+      <div class="stats">
+        ❤️ 98,9K &nbsp;&nbsp; 💬 610 &nbsp;&nbsp; 👁 957
+      </div>
+
+      <div class="assinaturas">
+        <button onclick="location.href='agendamento.html'">1 mês – R$19,90</button>
+        <button onclick="location.href='agendamento.html'">3 meses – R$56,72</button>
+        <button onclick="location.href='agendamento.html'">6 meses – R$107,46</button>
+      </div>
+
     </div>
+
   </div>
 
 </div>
   
 </body>
 </html>
+
 
 
 
