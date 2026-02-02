@@ -6,6 +6,54 @@
 <title>Assinatura Premium</title>
 
 <style>
+  .titulo-galeria {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 220px;
+  background: #000;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px);
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.overlay small {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #ffd54f;
+}
+
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -197,6 +245,7 @@ body{
   
 </body>
 </html>
+
 
 
 
